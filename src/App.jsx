@@ -15,7 +15,7 @@ const CertificateAutomationSystem = () => {
   const [sending, setSending] = useState(false);
   const [sendingProgress, setSendingProgress] = useState({ current: 0, total: 0 });
 
-  const API_URL = 'http://localhost:3001/api';
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001/api';
 
   const templates = {
     modern: { bg: '#1e40af', accent: '#3b82f6', font: 'Arial' },
